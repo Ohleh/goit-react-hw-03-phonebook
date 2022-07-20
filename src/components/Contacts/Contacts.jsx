@@ -7,6 +7,7 @@ const Contacts = ({ contacts, detele }) => (
     <ul>
       {contacts.map(({ id, name, number }) => (
         <ContactsRender
+          key={id}
           contact={[id, name, number]}
           deleteContact={() => detele(id)}
         />
