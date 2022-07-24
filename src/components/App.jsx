@@ -45,6 +45,7 @@ class App extends Component {
     const contacts = localStorage.getItem('memory');
     const parsedContacts = JSON.parse(contacts);
 
+    //якщо сховище порожнє то щоб не прочитати null при маунті, робимо перевірку на наявність
     if (parsedContacts) {
       this.setState({ contacts: parsedContacts });
     }

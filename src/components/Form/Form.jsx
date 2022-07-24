@@ -9,10 +9,9 @@ class Form extends Component {
 
   naneId = nanoid();
   numberId = nanoid();
-  userId = nanoid();
 
   handleChange = ev => {
-    this.setState({ id: this.userId, [ev.target.name]: ev.target.value });
+    this.setState({ id: nanoid(), [ev.target.name]: ev.target.value });
   };
 
   formSubmit = ev => {
