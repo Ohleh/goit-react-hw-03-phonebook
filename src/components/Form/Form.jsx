@@ -11,7 +11,7 @@ class Form extends Component {
   numberId = nanoid();
 
   handleChange = ev => {
-    this.setState({ id: nanoid(), [ev.target.name]: ev.target.value });
+    this.setState({ [ev.target.name]: ev.target.value });
   };
 
   formSubmit = ev => {
@@ -41,9 +41,9 @@ class Form extends Component {
           <input
             type="text"
             name="name"
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+            // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required
+            // required
             value={this.state.name}
             onChange={this.handleChange}
             key={this.naneId}
@@ -54,9 +54,9 @@ class Form extends Component {
           <input
             type="tel"
             name="number"
-            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+            // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-            required
+            // required
             value={this.state.number}
             onChange={this.handleChange}
             key={this.numberId}

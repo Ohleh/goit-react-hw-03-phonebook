@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { nanoid } from 'nanoid';
 
 import Contacts from './Contacts';
 import Form from './Form';
@@ -17,7 +18,7 @@ class App extends Component {
 
   formSubmitHendler = dataFromForm => {
     this.setState(prevState => ({
-      contacts: [...prevState.contacts, dataFromForm],
+      contacts: [...prevState.contacts, { ...dataFromForm, id: nanoid() }],
     }));
   };
 
